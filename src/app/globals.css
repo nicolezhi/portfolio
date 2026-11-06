@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
+/*
+  Semantic tokens live on :root so color and type can change
+  without rewriting components. Tailwind utilities reference them
+  through @theme inline.
+*/
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+  --muted: #525252;
+  --border: #e5e5e5;
+  --surface: #fafafa;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-mono: ui-monospace, "SFMono-Regular", ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --muted: #a3a3a3;
+    --border: #262626;
+    --surface: #141414;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  /* Color */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+
+  /* Typography */
+  --font-sans: var(--font-family-sans);
+  --font-mono: var(--font-family-mono);
+  --text-display: 2.5rem;
+  --text-display--line-height: 1.15;
+  --text-title: 1.875rem;
+  --text-title--line-height: 1.25;
+  --text-body: 1rem;
+  --text-body--line-height: 1.6;
+  --text-meta: 0.875rem;
+  --text-meta--line-height: 1.45;
+
+  /* Spacing */
+  --spacing-gutter: 1.5rem;
+  --spacing-section: 4rem;
+  --spacing-header: 4rem;
+
+  /* Layout */
+  --container-page: 72rem;
+  --container-reading: 40rem;
 }
