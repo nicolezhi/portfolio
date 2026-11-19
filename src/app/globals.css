@@ -12,8 +12,9 @@
   --border: #e5e5e5;
   --surface: #fafafa;
 
-  --font-family-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-sans: var(--font-neue-montreal), ui-sans-serif, system-ui, sans-serif;
   --font-family-mono: ui-monospace, "SFMono-Regular", ui-monospace, monospace;
+  --tracking-body: -0.04em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +38,8 @@
   /* Typography */
   --font-sans: var(--font-family-sans);
   --font-mono: var(--font-family-mono);
+  --font-bootzy: var(--font-bootzy-tm), ui-sans-serif, system-ui, sans-serif;
+  --font-melodrame: var(--font-melodrame-family), ui-sans-serif, system-ui, sans-serif;
   --text-display: 2.5rem;
   --text-display--line-height: 1.15;
   --text-title: 1.875rem;
@@ -53,5 +56,10 @@
 
   /* Layout */
   --container-page: 72rem;
+  --container-work: 57rem;
   --container-reading: 40rem;
+}
+
+body {
+  letter-spacing: var(--tracking-body);
 }

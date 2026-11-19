@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "@/components/navigation";
+import { bootzy, melodrame, neueMontreal } from "@/lib/fonts";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html
+      lang="en"
+      className={`${neueMontreal.variable} ${bootzy.variable} ${melodrame.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <SiteHeader />
         <main className="flex-1">{children}</main>

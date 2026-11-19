@@ -14,7 +14,11 @@ export function SiteNav({ items, className, onNavigate }: SiteNavProps) {
       <ul className={cn("flex items-center gap-6", className)}>
         {items.map((item) => (
           <li key={item.href}>
-            <Link href={item.href} onClick={onNavigate} className="text-body">
+            <Link
+              href={item.href}
+              onClick={onNavigate}
+              className="font-melodrame text-2xl font-normal lowercase leading-none tracking-normal"
+            >
               {item.label}
             </Link>
           </li>

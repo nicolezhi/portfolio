@@ -10,9 +10,11 @@ export default function WorkPage() {
   return (
     <section className="py-section">
       <Container>
-        <h1 className="text-display">Work</h1>
-        <div className="mt-section">
-          <CaseStudyList />
+        <div className="mx-auto w-full max-w-work">
+          <h1 className="font-bootzy text-display tracking-normal">Work</h1>
+          <div className="mt-section">
+            <CaseStudyList />
+          </div>
         </div>
       </Container>
     </section>

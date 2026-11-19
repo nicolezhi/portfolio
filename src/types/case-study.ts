@@ -4,4 +4,9 @@ export type CaseStudy = {
   summary: string;
   year?: string;
   role?: string;
+  tags?: string[];
+  image?: {
+    src: string;
+    alt: string;
+  };
 };

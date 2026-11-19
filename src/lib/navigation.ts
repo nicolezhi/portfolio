@@ -1,9 +1,11 @@
 export type NavItem = {
-  href: "/" | "/work";
+  href: "/work" | "/about" | "/play" | "/resume";
   label: string;
 };
 
 export const primaryNav = [
-  { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/play", label: "Play" },
+  { href: "/resume", label: "Resume" },
 ] as const satisfies readonly NavItem[];

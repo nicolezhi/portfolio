@@ -1,7 +1,11 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { CaseStudyArticle } from "@/components/case-studies";
-import { getCaseStudy } from "@/content/case-studies";
+import { caseStudies, getCaseStudy } from "@/content/case-studies";
+
+export function generateStaticParams() {
+  return caseStudies.map((study) => ({ slug: study.slug }));
+}
 
 export default function CaseStudyPage({ params }: PageProps<"/work/[slug]">) {
   return (
